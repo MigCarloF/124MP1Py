@@ -17,10 +17,20 @@ def Directory():
     DisplayAllStudents(students, numOfStudents)
 
 def CreateStudents(size):
-    pass
+    students = list()
+    i = 0
+    while i < size:
+        students.append(CreateStudent())
+        i += 1
+    return students
 
 def DisplayAllStudents(studentList, size):
-    pass
+    for x in studentList:
+        print("Student: ", x.name)
+        print("Age: ", x.age)
+        print("GPA: ", x.gpa)
+        print("Grade Level: ", x.gradeLevel)
+        print("\n")
 
 def Title():
     print("Student Directory Storage\n")
